@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Tareas | Diplomado Full Stack</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>📝 Lista de Tareas</h1>
+      <p>Organiza tus pendientes fácilmente</p>
+    </header>
+
+    <!-- Formulario -->
+    <section class="task-form">
+      <div class="input-box default">
+        <input type="text" id="taskTitle" required />
+        <label for="taskTitle">Título de la tarea</label>
+      </div>
+
+      <div class="input-box default">
+        <textarea id="taskDescription" rows="3" required></textarea>
+        <label for="taskDescription">Descripción de la tarea</label>
+      </div>
+
+      <div class="input-box date-box">
+        <label for="taskDate" class="static-label">Fecha de finalización</label>
+        <input type="date" id="taskDate" required />
+      </div>
+
+      <button id="addTaskBtn">Agregar tarea</button>
+    </section>
+
+    <!-- Filtros -->
+    <section class="filters">
+      <button class="filter-btn active" data-filter="all">Todas</button>
+      <button class="filter-btn" data-filter="completed">Completadas</button>
+      <button class="filter-btn" data-filter="pending">Pendientes</button>
+    </section>
+
+    <!-- Lista -->
+    <ul id="taskList" class="task-list"></ul>
+
+    <footer>
+      <p>Desarrollado por Alfredo Recinos · Diplomado Full Stack</p>
+    </footer>
+  </main>
+
+  <script type="module" src="./js/app.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
+
